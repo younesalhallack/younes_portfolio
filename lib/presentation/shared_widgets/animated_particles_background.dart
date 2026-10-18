@@ -2,8 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:younes_alhallack_portfolio/core/constant/app_colors.dart';
 
-/// خلفية متحركة تعرض شبكة خطوط خافتة وجسيمات متوهجة تطفو ببطء،
-/// بلون يتماشى مع لون السمة الأساسي (Primary Color).
+/// An animated background displaying a grid of faint lines and slowly floating glowing particles
 class AnimatedParticlesBackground extends StatefulWidget {
   final bool isDark;
   const AnimatedParticlesBackground({super.key, required this.isDark});

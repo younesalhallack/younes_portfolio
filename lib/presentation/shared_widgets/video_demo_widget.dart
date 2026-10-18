@@ -32,7 +32,7 @@ class _VideoDemoWidgetState extends State<VideoDemoWidget> {
 
     await _controller.initialize();
 
-    // إعدادات العرض للمحاكي
+    //  emulater setting
     await _controller.setLooping(true); //  looping
     await _controller.setVolume(0.0); // setvolume
     await _controller.play(); // autoplay

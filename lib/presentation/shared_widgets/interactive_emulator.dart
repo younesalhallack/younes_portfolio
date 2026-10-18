@@ -8,9 +8,9 @@ import '../../core/state/app_settings.dart';
 class InteractiveEmulator extends StatefulWidget {
   final String projectTitle;
   final IconData projectIcon;
-  final Widget? demoWidget; // محتوى تفاعلي مخصص
-  final List<String>? screenshots; // صور الشاشات (اختياري)
-  final String? demoVideoPath; // مسار فيديو الديمو (WebM) (اختياري)
+  final Widget? demoWidget;
+  final List<String>? screenshots;
+  final String? demoVideoPath;
 
   const InteractiveEmulator({
     super.key,
@@ -72,9 +72,7 @@ class _InteractiveEmulatorState extends State<InteractiveEmulator> {
           setState(() => _isVideoReady = true);
           controller
             ..setLooping(true)
-            ..setVolume(
-              0,
-            ) // كتم الصوت افتراضياً لضمان التشغيل التلقائي في المتصفح
+            ..setVolume(0)
             ..play();
         })
         .catchError((_) {
@@ -118,15 +116,10 @@ class _InteractiveEmulatorState extends State<InteractiveEmulator> {
             ? AppColors.darkTextSecondary
             : AppColors.lightTextSecondary;
 
-        // ---------------- Dynamic Phone Frame Sizing ----------------
-        // نحسب الحجم المتاح فعلياً على الشاشة (بعد خصم insetPadding
-        // والمسافة الفاصلة وزر الإغلاق) لتفادي أي Overflow على الشاشات
-        // القصيرة، مع الحفاظ على نسبة العرض إلى الارتفاع الأصلية (1:2).
+        //  Dynamic Phone Frame Sizing
+
         final screenHeight = MediaQuery.of(context).size.height;
-        const verticalChrome =
-            24 * 2 +
-            AppSizes.spacingMd +
-            56; // insetPadding + spacing + close button
+        const verticalChrome = 24 * 2 + AppSizes.spacingMd + 56;
         final maxPhoneHeight = (screenHeight - verticalChrome).clamp(
           320.0,
           600.0,
@@ -215,25 +208,24 @@ class _InteractiveEmulatorState extends State<InteractiveEmulator> {
     );
   }
 
-  // دالة تحديد نوع المحتوى المعروض
-  // أولوية العرض: demoWidget المخصص > فيديو الديمو > صور الشاشات > محتوى افتراضي
+  // define containt
   Widget _buildScreenContent({
     required Color primaryColor,
     required Color textColor,
     required Color textSecondary,
     required bool isArabic,
   }) {
-    // 1. إذا تم تمرير ودجت تفاعلية مخصصة
+    // demo widget
     if (widget.demoWidget != null) {
       return widget.demoWidget!;
     }
 
-    // 2. إذا تم تمرير مسار فيديو ديمو (WebM)
+    // demo
     if (widget.demoVideoPath != null) {
       return _buildVideoContent(primaryColor: primaryColor, isArabic: isArabic);
     }
 
-    // 3. إذا تم تمرير صور للمشروع (Carousel)
+    // Carousel
     if (widget.screenshots != null && widget.screenshots!.isNotEmpty) {
       return Stack(
         children: [
@@ -251,7 +243,7 @@ class _InteractiveEmulatorState extends State<InteractiveEmulator> {
               );
             },
           ),
-          // مؤشر النظرات (Dots)
+          //  Dots
           if (widget.screenshots!.length > 1)
             Positioned(
               bottom: 12,
@@ -280,7 +272,7 @@ class _InteractiveEmulatorState extends State<InteractiveEmulator> {
       );
     }
 
-    // 4. المحتوى الافتراضي (في حال عدم تمرير أي شيء)
+    //default containt
     return Padding(
       padding: const EdgeInsets.all(AppSizes.spacingMd),
       child: Column(
@@ -316,8 +308,6 @@ class _InteractiveEmulatorState extends State<InteractiveEmulator> {
     );
   }
 
-  /// يعرض فيديو الديمو (WebM) بملء شاشة الهاتف، مع عنوان المشروع
-  /// فوق تدرج شفاف أسفل الشاشة، وإمكانية إيقاف/تشغيل بالنقر.
   Widget _buildVideoContent({
     required Color primaryColor,
     required bool isArabic,
@@ -361,7 +351,7 @@ class _InteractiveEmulatorState extends State<InteractiveEmulator> {
             ),
           ),
 
-          // أيقونة تشغيل/إيقاف تظهر عند الإيقاف فقط
+          // run icon
           Center(
             child: AnimatedOpacity(
               opacity: controller.value.isPlaying ? 0 : 1,
@@ -383,7 +373,7 @@ class _InteractiveEmulatorState extends State<InteractiveEmulator> {
             ),
           ),
 
-          // عنوان المشروع فوق تدرج شفاف أسفل الشاشة
+          //project title
           Positioned(
             left: 0,
             right: 0,

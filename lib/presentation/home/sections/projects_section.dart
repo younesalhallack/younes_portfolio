@@ -60,8 +60,8 @@ class ProjectsSection extends StatelessWidget {
       descriptionKey:
           'Dukan — small-retail management . Inventory, invoicing, and sales & profit reporting for small retail shops.',
       icon: Icons.store_outlined,
-      repoUrl: 'https://github.com/younesalhallack/dukan',
-      demoVideoPath: 'assets/videos/project1_demo.webm',
+      repoUrl: 'https://github.com/younesalhallack/dukan_special_app',
+      demoVideoPath: 'assets/videos/dukan.webm',
     ),
   ];
 

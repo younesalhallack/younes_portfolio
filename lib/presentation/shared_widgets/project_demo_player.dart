@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:younes_alhallack_portfolio/core/constant/app_colors.dart';
 
-/// مشغّل فيديو مصغّر لعرض ديمو المشروع داخل إطار المحاكي (InteractiveEmulator).
-/// يعمل تلقائياً (Autoplay + Loop + Muted) كعرض ديمو سريع بدون تحكم المستخدم اليدوي بالضرورة،
-/// لكن يوفر زر تشغيل/إيقاف بسيط عند الحاجة.
+// A mini video player to display a demo of the project within the InteractiveEmulator
+
 class ProjectDemoPlayer extends StatefulWidget {
   final String videoAssetPath;
   final bool isDark;
@@ -34,9 +33,7 @@ class _ProjectDemoPlayerState extends State<ProjectDemoPlayer> {
             setState(() => _isReady = true);
             _controller
               ..setLooping(true)
-              ..setVolume(
-                0,
-              ) // كتم الصوت افتراضياً (سلوك متعارف عليه لديمو تلقائي)
+              ..setVolume(0)
               ..play();
           })
           .catchError((_) {
@@ -99,7 +96,7 @@ class _ProjectDemoPlayerState extends State<ProjectDemoPlayer> {
               child: VideoPlayer(_controller),
             ),
           ),
-          // أيقونة تشغيل/إيقاف تظهر بشفافية عند الإيقاف فقط
+          // run/stop icon
           AnimatedOpacity(
             opacity: _controller.value.isPlaying ? 0 : 1,
             duration: const Duration(milliseconds: 200),
