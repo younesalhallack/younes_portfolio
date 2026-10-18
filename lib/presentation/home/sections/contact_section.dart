@@ -123,8 +123,6 @@ class ContactSection extends StatelessWidget {
   }
 }
 
-/// نموذج "تواصل معي": اسم، بريد إلكتروني، رسالة — يُرسَل عبر
-/// ContactFormService (Formspree) دون أن يرى الزائر وجهة الإرسال.
 class _ContactForm extends StatefulWidget {
   const _ContactForm();
 
@@ -348,11 +346,6 @@ class _ContactFormState extends State<_ContactForm> {
   }
 }
 
-/// أيقونة تواصل اجتماعي دائرية (بدون أي نص مقروء يكشف الرقم/الرابط الفعلي).
-/// يستقبل iconData بنوع dynamic عمداً لأن أيقونات العلامات التجارية في
-/// font_awesome_flutter (مثل Github/Whatsapp/Telegram) قد تُرجع نوعاً
-/// خاصاً (FaIconData) لا يتوافق تلقائياً مع IconData القياسي، وFaIcon
-/// نفسه يقبل كلا النوعين دون مشكلة.
 class _SocialIconButton extends StatelessWidget {
   final dynamic iconData;
   final String tooltip;
