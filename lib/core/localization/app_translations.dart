@@ -1,55 +1,55 @@
-/// dec
+/// Portfolio copy, Arabic and English.
 class AppTranslations {
   AppTranslations._();
 
   static const Map<String, Map<String, String>> _values = {
     // ------------------ Nav Bar ------------------
-    'nav_name': {'ar': 'يونس الحلاق', 'en': 'Younes Al-Hallack'},
+    'nav_name': {'ar': 'يونس الحلاق', 'en': 'Younes Alhallack'},
     'nav_home': {'ar': 'الرئيسية', 'en': 'Home'},
     'nav_projects': {'ar': 'المشاريع', 'en': 'Projects'},
     'nav_contact': {'ar': 'تواصل معي', 'en': 'Contact'},
 
     // ------------------ Hero Section ------------------
     'hero_greeting': {'ar': 'مرحباً، أنا', 'en': "Hi, I'm"},
-    'hero_name': {'ar': 'يونس الحلاق', 'en': 'Younes Al-Hallak'},
-    'hero_role_1': {
-      'ar': 'مطور Flutter محترف',
-      'en': 'Professional Flutter Developer',
-    },
+    'hero_name': {'ar': 'يونس الحلاق', 'en': 'Younes Alhallack'},
+    'hero_role_1': {'ar': 'مطور تطبيقات Flutter', 'en': 'Flutter Developer'},
+    // Kept short: the typewriter box is a fixed 36px high.
     'hero_role_2': {
-      'ar': 'خبير في الأنظمة المالية',
-      'en': 'Fintech & Payments Expert',
+      'ar': 'مطور Full-stack · NestJS',
+      'en': 'Full-Stack Developer · NestJS',
     },
     'hero_role_3': {
-      'ar': 'مصمم واجهات تفاعلية',
-      'en': 'Interactive UI Builder',
+      'ar': 'خبرة 8 سنوات في المدفوعات',
+      'en': '8 Years in Payment Systems',
     },
     'hero_description': {
       'ar':
-          'أمتلك خبرة سنتين في تطوير تطبيقات Flutter، مدعومة بخبرة 8 سنوات '
-          'في عالم الأنظمة المالية والمدفوعات (Fintech). أُترجم هذا المزيج '
-          'النادر إلى حلول رقمية آمنة، سريعة، وبتصميم مستقبلي مميز.',
+          'أبني تطبيقات Flutter والسيرفر الذي يقف خلفها بـNode.js وNestJS، '
+          'مع قواعد بيانات محلية وسحابية. وخلفي ثماني سنوات في المدفوعات '
+          'الإلكترونية، فأعرف ما يعنيه أن يتعامل تطبيقك مع المال.',
       'en':
-          'I bring 2 years of hands-on Flutter development, backed by 8 years '
-          'of deep expertise in Fintech & Payment systems. I translate this rare '
-          'combination into secure, fast, and beautifully futuristic digital solutions.',
+          'I build Flutter apps and the Node.js and NestJS servers behind '
+          'them, with local and cloud databases. Eight years in electronic '
+          'payments mean I know what it takes for an app to handle money '
+          'properly.',
     },
     'hero_cta_projects': {'ar': 'استعرض مشاريعي', 'en': 'View My Projects'},
     'hero_cta_contact': {'ar': 'تواصل معي', 'en': 'Get In Touch'},
     'hero_years_flutter': {
-      'ar': 'سنتان خبرة Flutter',
-      'en': '2 Years Flutter Exp.',
+      'ar': 'سنتان من Flutter',
+      'en': '2 Years of Flutter',
     },
     'hero_years_fintech': {
-      'ar': '8 سنوات خبرة Fintech',
-      'en': '8 Years Fintech Exp.',
+      'ar': '8 سنوات في المدفوعات',
+      'en': '8 Years in Payments',
     },
 
     // ------------------ Projects Section ------------------
     'projects_title': {'ar': 'مشاريعي', 'en': 'My Projects'},
     'projects_subtitle': {
-      'ar': 'مجموعة مختارة من الأعمال التي تجمع بين الأداء والتصميم',
-      'en': 'A curated selection of work combining performance and design',
+      'ar': 'مشاريع مفتوحة المصدر بنيتها من أول سطر إلى آخر شاشة',
+      'en':
+          'Open-source projects I built from the first line to the last screen',
     },
     'project_demo_button': {'ar': 'عرض الديمو', 'en': 'View Demo'},
 
@@ -67,43 +67,62 @@ class AppTranslations {
       'en': 'التبديل إلى العربية',
     },
 
-    'project_1_title': {
-      'ar': 'نظام مدفوعات رقمي',
-      'en': 'Digital Payment Gateway',
-    },
-    'project_1_desc': {
+    // ------------------ Project cards ------------------
+    // These replace the old generic project_1..3 entries
+    // (Digital Payment Gateway / Smart Digital Wallet / QR Payment System),
+    // which did not match the real projects shown on the site.
+    // Point each card's description at the matching key below.
+    'project_rafiq_desc': {
       'ar':
-          'منصة دفع إلكتروني متكاملة تدعم المعاملات الآمنة والتحويلات الفورية.',
+          'مخطط أهداف بالذكاء الاصطناعي: تكتب هدفك فيُعدّ لك خطة بمهام '
+          'وأولويات ومواعيد، ويتتبع تقدمك بنسبة مئوية، مع مساعد محادثة.',
       'en':
-          'A complete e-payment platform supporting secure transactions and instant transfers.',
+          'AI goal planner: set a goal and get a plan with tasks, '
+          'priorities, and due dates, tracked as a percentage, plus an '
+          'assistant chat.',
     },
-
-    'project_2_title': {'ar': 'محفظة رقمية ذكية', 'en': 'Smart Digital Wallet'},
-    'project_2_desc': {
-      'ar': 'تطبيق محفظة إلكترونية لإدارة الأرصدة والمعاملات المالية اليومية.',
+    'project_bill_desc': {
+      'ar':
+          'إدارة الدخل والمصاريف بعملات متعددة (ليرة ودولار ويورو) مع '
+          'تقارير حسب الفئة، ومقارنة شهرية، ونسخ احتياطي على Google Drive.',
       'en':
-          'A digital wallet app for managing balances and everyday financial transactions.',
+          'Income and expense manager in SYP, USD, and EUR, with category '
+          'reports, monthly comparison, and Google Drive backup.',
     },
-
-    'project_3_title': {'ar': 'نظام دفع بـ QR', 'en': 'QR Payment System'},
-    'project_3_desc': {
-      'ar': 'حل دفع سريع عبر مسح رمز QR مصمم للمتاجر والمطاعم.',
-      'en': 'A fast QR-code payment solution built for stores and restaurants.',
+    'project_clearx_desc': {
+      'ar':
+          'منصة مطابقة وتسوية: ترفع حركاتك وكشف الحساب البنكي، فتطابقها '
+          'وتُظهر ما لا يتطابق. React وNestJS.',
+      'en':
+          "Matching and reconciliation platform: upload your transactions "
+          "and a bank statement, and it flags what doesn't match. React, "
+          "NestJS.",
+    },
+    'project_dukan_desc': {
+      'ar':
+          'تطبيق إدارة لمحل صغير: مخزون وفواتير وتقارير مبيعات وأرباح. '
+          'flutter وSQLite',
+      'en':
+          'Small-shop system: inventory, invoices, and sales and profit '
+          'reports.  Flutter , SQLite.',
     },
 
     // ------------------ Tech Stack Section ------------------
     'techstack_title': {'ar': 'التقنيات المستخدمة', 'en': 'Tech Stack'},
     'techstack_subtitle': {
-      'ar': 'الأدوات والتقنيات التي أستخدمها لبناء حلول موثوقة وقابلة للتوسع',
-      'en':
-          'Tools and technologies I use to build reliable, scalable solutions',
+      'ar': 'الأدوات التي أستخدمها لبناء التطبيق والسيرفر الذي يقف خلفه',
+      'en': 'The tools I use to build the app and the server behind it',
     },
 
     // ------------------ Contact Section ------------------
     'contact_title': {'ar': 'تواصل معي', 'en': 'Get In Touch'},
     'contact_subtitle': {
-      'ar': 'هل لديك مشروع أو فرصة عمل؟ يسعدني التحدث معك',
-      'en': "Have a project or opportunity in mind? I'd love to hear from you",
+      'ar':
+          'هل لديك مشروع أو فرصة عمل؟ اكتب لي وسأرد في أقرب وقت. '
+          'أنا متاح لوظائف عن بُعد بدوام كامل ولمشاريع فريلانس.',
+      'en':
+          "Have a project or a role in mind? Write to me and I'll reply "
+          "soon. I'm open to full-time remote roles and freelance work.",
     },
     'contact_email_label': {'ar': 'البريد الإلكتروني', 'en': 'Email'},
     'contact_linkedin_label': {'ar': 'لينكدإن', 'en': 'LinkedIn'},
@@ -152,18 +171,22 @@ class AppTranslations {
     },
     'about_bio': {
       'ar':
-          'أنا يونس الحلاق، مطور Flutter شغوف ببناء تجارب رقمية سريعة وموثوقة. '
-          'قضيت 8 سنوات في عالم الأنظمة المالية والمدفوعات قبل أن أنتقل بخبرتي '
-          'إلى عالم تطوير التطبيقات، حيث أجمع بين الدقة التي تتطلبها الأنظمة '
-          'المالية والإبداع في تصميم واجهات مستخدم حديثة وسلسة. أؤمن بأن أفضل '
-          'المنتجات تُبنى عند التقاء الهندسة الجيدة بالتصميم المدروس.',
+          'أنا يونس الحلاق، مطور موبايل Full-stack. قبل Flutter قضيت ثماني '
+          'سنوات داخل المدفوعات الإلكترونية: ربط سويتشات وبوابات دفع، '
+          'وتسوية يومية، وبنية شبكة دفع وطنية. اليوم أضع هذه الدقة في '
+          'تطبيقات منظمة البنية (Clean Architecture وRiverpod) وفي سيرفرات '
+          'NestJS وNode.js.\n\n'
+          'أشرفت على Q Pay، تطبيق Flutter لطلب الدفع، حتى مرحلة الترخيص، '
+          'قبل أن تغلق الشركة قبل الإطلاق.',
       'en':
-          "I'm Younes Al-Hallak, a Flutter developer passionate about building "
-          "fast, reliable digital experiences. I spent 8 years in Fintech & "
-          "Payments before bringing that expertise into app development, "
-          "blending the precision financial systems demand with a genuine eye "
-          "for clean, modern UI. I believe the best products happen where solid "
-          "engineering meets thoughtful design.",
+          "I'm Younes, a full-stack mobile developer. Before Flutter I spent "
+          "eight years inside electronic payments: switch and gateway "
+          "integration, daily reconciliation, and the infrastructure of a "
+          "national payment network. Today I bring that precision to "
+          "well-structured apps (Clean Architecture, Riverpod) and to NestJS "
+          "and Node.js backends.\n\n"
+          "I supervised Q Pay, a Flutter payment-request app, through to "
+          "licensing, before the company closed ahead of launch.",
     },
 
     'about_download_cv': {'ar': 'تحميل السيرة الذاتية', 'en': 'Download CV'},

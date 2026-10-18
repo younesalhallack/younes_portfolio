@@ -33,32 +33,28 @@ class ProjectsSection extends StatelessWidget {
   static const List<_ProjectData> _projects = [
     _ProjectData(
       titleKey: 'Rafiq',
-      descriptionKey:
-          'Set a goal, and an AI engine drafts a step-by-step plan to reach it — breaking it into tasks with priorities and due dates, and tracking progress toward each goal as a percentage. A built-in assistant chat lets you ask what to focus on today and update task status conversationally.',
+      descriptionKey: 'project_rafiq_desc',
       icon: Icons.task_alt_outlined,
       repoUrl: 'https://github.com/younesalhallack/Rafiq',
       demoVideoPath: 'assets/videos/rafiq.webm',
     ),
     _ProjectData(
       titleKey: 'Clear-X',
-      descriptionKey:
-          'A merchant uploads their own transaction file alongside a bank statement, and the system automatically matches entries and flags discrepancies — applying the same logic used in professional EOD reconciliation.',
+      descriptionKey: 'project_clearx_desc',
       icon: Icons.account_balance_wallet_rounded,
       repoUrl: 'https://github.com/younesalhallack/clearx',
       demoVideoPath: 'assets/videos/clear_X.webm',
     ),
     _ProjectData(
       titleKey: 'Bill App',
-      descriptionKey:
-          'Log income by source (salary, freelance, investment) and expenses by custom or default category, with the running balance updating in real time. A reports tab breaks down spending and income share by category and compares income against expenses month over month — all in SYP, USD, or EUR',
+      descriptionKey: 'project_bill_desc',
       icon: Icons.analytics_outlined,
       repoUrl: 'https://github.com/younesalhallack/bills_app',
       demoVideoPath: 'assets/videos/bill.webm',
     ),
     _ProjectData(
       titleKey: 'Dukan',
-      descriptionKey:
-          'Dukan — small-retail management . Inventory, invoicing, and sales & profit reporting for small retail shops.',
+      descriptionKey: 'project_dukan_desc',
       icon: Icons.store_outlined,
       repoUrl: 'https://github.com/younesalhallack/dukan_special_app',
       demoVideoPath: 'assets/videos/dukan.webm',

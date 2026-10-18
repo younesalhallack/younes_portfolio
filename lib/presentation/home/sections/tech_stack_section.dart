@@ -18,12 +18,18 @@ class TechStackSection extends StatelessWidget {
   static const List<_TechItem> _techs = [
     _TechItem('Flutter', Icons.flutter_dash_rounded),
     _TechItem('Dart', Icons.code_rounded),
-    _TechItem('Firebase', Icons.local_fire_department_rounded),
+    _TechItem('Riverpod', Icons.hub_rounded),
+    _TechItem('Clean Architecture', Icons.layers_rounded),
+    _TechItem('Node.js', Icons.terminal_rounded),
+    _TechItem('NestJS', Icons.account_tree_rounded),
     _TechItem('REST APIs', Icons.api_rounded),
+    _TechItem('Firebase', Icons.local_fire_department_rounded),
+    _TechItem('MySQL / SQL', Icons.storage_rounded),
+    _TechItem('ISAR / SQLite', Icons.sd_storage_rounded),
     _TechItem('Git', Icons.merge_type_rounded),
     _TechItem('Payment Gateways', Icons.payments_rounded),
-    _TechItem('SQL', Icons.storage_rounded),
-    _TechItem('CI/CD', Icons.settings_suggest_rounded),
+    // Re-enable only if you actually use CI/CD (GitHub Actions, Codemagic...):
+    // _TechItem('CI/CD', Icons.settings_suggest_rounded),
   ];
 
   @override
