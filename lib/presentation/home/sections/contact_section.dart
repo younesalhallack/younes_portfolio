@@ -15,7 +15,7 @@ import '../../../core/state/app_settings.dart';
 // عدّل القيم التالية بمعلوماتك الحقيقية:
 // ---------------------------------------------------------------------
 const String _githubUrl = 'github.com/younesalhallack';
-const String _whatsappNumber = '963XXXXXXXXX'; // بدون + أو أصفار بادئة
+const String _whatsappNumber = '+963937877116'; // بدون + أو أصفار بادئة
 const String _telegramUsername = 'your_telegram_username';
 
 /// قسم "تواصل معي": نموذج رسالة يُرسِل عبر Formspree إلى بريدك دون
