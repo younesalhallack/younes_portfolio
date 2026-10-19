@@ -30,7 +30,7 @@ class AppSettings extends ChangeNotifier {
   // ---------------------------------------------------------------------
   // Locale (Language)
   // ---------------------------------------------------------------------
-  Locale _locale = const Locale('ar'); // arabic is default
+  Locale _locale = const Locale('en'); // arabic is default
 
   Locale get locale => _locale;
 
