@@ -11,16 +11,10 @@ import '../../../core/localization/app_translations.dart';
 import '../../../core/state/app_settings.dart';
 
 // ---------------------------------------------------------------------
-// ⚠️ بيانات التواصل غير الظاهرة كنص على الصفحة (فقط أيقونات قابلة للنقر).
-// عدّل القيم التالية بمعلوماتك الحقيقية:
-// ---------------------------------------------------------------------
 const String _githubUrl = 'github.com/younesalhallack';
-const String _whatsappNumber = '+963937877116'; // بدون + أو أصفار بادئة
-const String _telegramUsername = 'your_telegram_username';
+const String _whatsappNumber = '+963937877116';
+const String _telegramUsername = 'https://t.me/+963937877116';
 
-/// قسم "تواصل معي": نموذج رسالة يُرسِل عبر Formspree إلى بريدك دون
-/// عرضه أبداً، بالإضافة إلى أيقونات GitHub/WhatsApp/Telegram فقط
-/// (بدون عرض الرقم أو الرابط كنص على الصفحة).
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
 
