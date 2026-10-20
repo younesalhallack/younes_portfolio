@@ -13,7 +13,7 @@ import '../../../core/state/app_settings.dart';
 // ---------------------------------------------------------------------
 const String _githubUrl = 'github.com/younesalhallack';
 const String _whatsappNumber = '+963937877116';
-const String _telegramUsername = 'https://t.me/+963937877116';
+const String _telegramUsername = '+963937877116';
 
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});
